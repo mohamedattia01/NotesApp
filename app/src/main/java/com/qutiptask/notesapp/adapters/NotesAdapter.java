@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.qutiptask.notesapp.Notes;
 import com.qutiptask.notesapp.R;
 import com.qutiptask.notesapp.view.AddNewNoteActivity;
-import com.qutiptask.notesapp.view_model.NotesViewModel;
+import com.qutiptask.notesapp.viewModel.NotesViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

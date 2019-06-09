@@ -1,14 +1,17 @@
-package com.qutiptask.notesapp;
+package com.qutiptask.notesapp.repositories;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
 
+import com.qutiptask.notesapp.Notes;
+import com.qutiptask.notesapp.database.NotesDataBase;
+
 import java.util.List;
 
 public class NotesRepository {
 
-    private Note_DataAccessObject noteDataAccessObject;
+    private NotesDataAccessObject noteDataAccessObject;
     private LiveData<List<Notes>> listLiveData;
 
     public NotesRepository(Application application){
@@ -43,9 +46,9 @@ public class NotesRepository {
 
     private static class InsertNotesAsync extends AsyncTask<Notes, Void, Void> {
 
-        private Note_DataAccessObject noteDataAccessObject;
+        private NotesDataAccessObject noteDataAccessObject;
 
-        InsertNotesAsync(Note_DataAccessObject noteDataAccessObject) {
+        InsertNotesAsync(NotesDataAccessObject noteDataAccessObject) {
             this.noteDataAccessObject = noteDataAccessObject;
         }
 
@@ -59,9 +62,9 @@ public class NotesRepository {
 
     private static class DeleteNotesAsync extends AsyncTask<Notes, Void, Void>{
 
-        private Note_DataAccessObject noteDataAccessObject;
+        private NotesDataAccessObject noteDataAccessObject;
 
-        DeleteNotesAsync(Note_DataAccessObject noteDataAccessObject) {
+        DeleteNotesAsync(NotesDataAccessObject noteDataAccessObject) {
             this.noteDataAccessObject = noteDataAccessObject;
         }
 
@@ -75,9 +78,9 @@ public class NotesRepository {
 
     private static class UpdateNotesAsync extends AsyncTask<Notes, Void, Void>{
 
-        private Note_DataAccessObject noteDataAccessObject;
+        private NotesDataAccessObject noteDataAccessObject;
 
-        UpdateNotesAsync(Note_DataAccessObject noteDataAccessObject) {
+        UpdateNotesAsync(NotesDataAccessObject noteDataAccessObject) {
             this.noteDataAccessObject = noteDataAccessObject;
         }
 
@@ -91,9 +94,9 @@ public class NotesRepository {
 
     private static class DeleteAllNotesAsync extends AsyncTask<Void, Void, Void>{
 
-        private Note_DataAccessObject noteDataAccessObject;
+        private NotesDataAccessObject noteDataAccessObject;
 
-        DeleteAllNotesAsync(Note_DataAccessObject noteDataAccessObject) {
+        DeleteAllNotesAsync(NotesDataAccessObject noteDataAccessObject) {
             this.noteDataAccessObject = noteDataAccessObject;
         }
 

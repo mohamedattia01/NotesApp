@@ -3,9 +3,7 @@ package com.qutiptask.notesapp.view;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
-import android.os.Build;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
@@ -21,11 +19,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.qutiptask.notesapp.Settings;
+import com.qutiptask.notesapp.UiUtilities.Utilities;
 import com.qutiptask.notesapp.Notes;
-import com.qutiptask.notesapp.view_model.NotesViewModel;
+import com.qutiptask.notesapp.viewModel.NotesViewModel;
 import com.qutiptask.notesapp.R;
-import com.qutiptask.notesapp.SwipeToDelete.SwipeToDeleteCallback;
+import com.qutiptask.notesapp.UiUtilities.SwipeToDeleteCallback;
 import com.qutiptask.notesapp.adapters.NotesAdapter;
 
 import java.util.List;
@@ -51,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         mToolbar.setTitleTextColor(getResources().getColor(R.color.white));
         mToolbar.setBackgroundColor(getResources().getColor(R.color.top_bar_color));
 
-        if (Settings.getLocale(this).equals(Locale.ENGLISH.getDisplayLanguage())) {
+        if (Utilities.getLocale(this).equals(Locale.ENGLISH.getDisplayLanguage())) {
             lang = 1;
             displayLang = "en";
         } else {
@@ -98,12 +96,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void changeLang(String lang_refer) {
         if (lang_refer.equals("en")) {
-            Settings.init(this).saveLang("en");
+            Utilities.init(this).saveLang("en");
         } else {
-            Settings.init(this).saveLang("ar");
+            Utilities.init(this).saveLang("ar");
         }
 
-        if (Settings.getLocale(this).equals(Locale.ENGLISH.getDisplayLanguage())) {
+        if (Utilities.getLocale(this).equals(Locale.ENGLISH.getDisplayLanguage())) {
             lang = 1;
             displayLang = "en";
         } else {
@@ -128,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        if (displayLang.equals(Settings.init(this).getLang())) {
+        if (displayLang.equals(Utilities.init(this).getLang())) {
             return;
         } else {
             finish();
@@ -153,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
 
         } else if (item.getItemId() == R.id.langChang) {
-            if (Settings.init(MainActivity.this).getLang().equals("en"))
+            if (Utilities.init(MainActivity.this).getLang().equals("en"))
                 changeLang("ar");
             else
                 changeLang("en");

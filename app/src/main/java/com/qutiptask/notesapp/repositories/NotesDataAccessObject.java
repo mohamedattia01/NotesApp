@@ -1,4 +1,4 @@
-package com.qutiptask.notesapp;
+package com.qutiptask.notesapp.repositories;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
@@ -7,10 +7,12 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
+import com.qutiptask.notesapp.Notes;
+
 import java.util.List;
 
 @Dao
-public interface Note_DataAccessObject {
+public interface NotesDataAccessObject {
 
     @Insert
     void insert(Notes note);

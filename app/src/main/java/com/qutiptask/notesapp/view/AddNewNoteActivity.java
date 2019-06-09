@@ -1,6 +1,5 @@
 package com.qutiptask.notesapp.view;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -12,9 +11,7 @@ import android.view.MenuItem;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
-import com.qutiptask.notesapp.Notes;
 import com.qutiptask.notesapp.R;
-import com.qutiptask.notesapp.view_model.NotesViewModel;
 
 public class AddNewNoteActivity extends AppCompatActivity {
 

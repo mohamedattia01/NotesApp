@@ -1,4 +1,4 @@
-package com.qutiptask.notesapp.view_model;
+package com.qutiptask.notesapp.viewModel;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
@@ -6,7 +6,7 @@ import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
 
 import com.qutiptask.notesapp.Notes;
-import com.qutiptask.notesapp.NotesRepository;
+import com.qutiptask.notesapp.repositories.NotesRepository;
 
 import java.util.List;
 

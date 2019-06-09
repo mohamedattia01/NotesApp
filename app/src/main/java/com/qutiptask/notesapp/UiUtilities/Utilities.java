@@ -1,4 +1,4 @@
-package com.qutiptask.notesapp;
+package com.qutiptask.notesapp.UiUtilities;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,31 +8,22 @@ import android.util.Log;
 
 import java.util.Locale;
 
-public class Settings {
+public class Utilities {
 
-    static Settings inistance;
-    String language;
+    private static Utilities inistance;
 
-    // Sharedpref file name
     private static final String PREF_NAME = "OrientalWeavers";
-    // Shared Preferences
-    SharedPreferences pref;
+    private SharedPreferences pref;
+    private SharedPreferences.Editor editor;
 
-    // Editor for Shared preferences
-    SharedPreferences.Editor editor;
-
-    // Context
-    Context _context;
-
-    public Settings(Context context) {
-        this._context = context;
-        pref = _context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+    private Utilities(Context context) {
+        pref = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         editor = pref.edit();
     }
 
-    public static Settings init(Context context) {
+    public static Utilities init(Context context) {
         if (inistance == null) {
-            inistance = new Settings(context);
+            inistance = new Utilities(context);
         }
 
         return inistance;
