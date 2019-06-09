@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="NotesAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar" >
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/top_bar_color</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="passwordToggleTint">@color/top_bar_color</item>
+        <item name="fontFamily">@font/helveticaneueltstd_cn</item>
+
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/top_bar_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">start</item>
+
+        <item name="android:layout_gravity">start</item>
+    </style>
+
+    <style name="TextViewStyle" parent="@android:style/Widget.TextView">
+
+        <item name="fontFamily">@font/helveticaneueltstd_cn</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/top_bar_color</item>
+
+    </style>
+</resources>

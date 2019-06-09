@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NotesApp</string>
+    <string name="title_text">عنوان</string>
+    <string name="body_text">محتوي</string>
+    <string name="priority">الاولويه:</string>
+    <string name="save_txt">حفظ</string>
+    <string name="addNote_txt">اضف ملاحظه</string>
+    <string name="close_txt">اغلاق</string>
+    <string name="snack_bar_text">1 task deleted</string>
+    <string name="snack_bar_undo">undo</string>
+    <string name="delete_all">امسح الكل</string>
+    <string name="lang_tx">English</string>
+    <string name="no_notes_to_show">لا يوجد ملاحظات</string>
+    <string name="edit_note">تعديل الملاحظه</string>
+</resources>

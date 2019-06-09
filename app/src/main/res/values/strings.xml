@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NotesApp</string>
+    <string name="title_text">Title</string>
+    <string name="body_text">Body</string>
+    <string name="priority">Priority:</string>
+    <string name="save_txt">Save</string>
+    <string name="addNote_txt">Add Note</string>
+    <string name="close_txt">Close</string>
+    <string name="snack_bar_text">1 task deleted</string>
+    <string name="snack_bar_undo">undo</string>
+    <string name="delete_all">delete all</string>
+    <string name="lang_tx">عربي</string>
+    <string name="no_notes_to_show">No Notes To Show</string>
+    <string name="edit_note">Edit Note</string>
+</resources>
